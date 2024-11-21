@@ -1,3 +1,4 @@
+//必要なライブラリのロード
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,7 +9,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var helloRouter = require('./routes/hello');//1031追加
 var notesRouter = require('./routes/notes');//1111追加
+var notesRouter = require('./routes/notes2');//1121追加
 
+
+//オブジェクトの作成
 var app = express();
 
 // view engine setup
@@ -25,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);//1031追加
 app.use('/notes', notesRouter);//1111追加
+app.use('/notes2', notesRouter);//1121追加
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
