@@ -9,9 +9,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var helloRouter = require('./routes/hello');//1031追加
 var notesRouter = require('./routes/notes');//1111追加
-//var notesRouter = require('./routes/notes2');//1121追加
-var notesRouter = require('./routes/cat');//1122追加
-
+//var notes2Router = require('./routes/notes2');//1121追加
+var catRouter = require('./routes/cat');//1122追加
+var yes_noRouter = require('./routes/yes_no');//1122追加
 
 //オブジェクトの作成
 var app = express();
@@ -30,8 +30,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);//1031追加
 app.use('/notes', notesRouter);//1111追加
-//app.use('/notes2', notesRouter);//1121追加
-app.use('/cat', notesRouter);//1122追加
+//app.use('/notes2', notes2Router);//1121追加
+app.use('/cat', catRouter);//1122追加
+app.use('/yes_no', yes_noRouter);//1122追加
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
