@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var helloRouter = require('./routes/hello');//1031追加
 var notesRouter = require('./routes/notes');//1111追加
 var notesRouter = require('./routes/notes2');//1121追加
+var notesRouter = require('./routes/cat');//1122追加
 
 
 //オブジェクトの作成
@@ -30,6 +31,7 @@ app.use('/users', usersRouter);
 app.use('/hello', helloRouter);//1031追加
 app.use('/notes', notesRouter);//1111追加
 app.use('/notes2', notesRouter);//1121追加
+app.use('/cat', notesRouter);//1122追加
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
