@@ -7,8 +7,7 @@ require('dotenv').config(); //利用するためには、先にインストー�
 // 接続情報を設定
 const { MongoClient } = require("mongodb");
 const uri = process.env.MONGODB_URI; //別ファイルでMongoDBへのURI設定が必要
-//直接URIを入力する事でも解決可能。正しサーバアップデートは要注意！
-//const uri = "mongodb+srv://lucky-nuts:yfd2JqggeKbfqnz3@test.wjten.mongodb.net/?retryWrites=true&w=majority&appName=test";
+//直接URIを入力する事でも解決可能。
 const client = new MongoClient(uri);
 
 // corsミドルウェアを使用
